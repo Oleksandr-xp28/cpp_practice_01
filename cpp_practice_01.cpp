@@ -2,6 +2,9 @@
 //
 
 #include <iostream>
+#include <windows.h>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main()
