@@ -1,24 +1,26 @@
-// cpp_practice_01.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <windows.h>
-#include <cmath>
-#include <iomanip>
-using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+void printTableLine() {
+    Beep(500, 300); // Звуковий сигнал
+    std::cout << "╔════════════════════════════════════════════╗" << std::endl;
+    Beep(500, 300); // Звуковий сигнал
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void printTableRow(const std::string& value1, const std::string& value2, const std::string& value3, const std::string& value4) {
+    Beep(500, 300); // Звуковий сигнал
+    std::cout << "║ " << value1 << " ║ " << value2 << " ║ " << value3 << " ║ " << value4 << " ║" << std::endl;
+    Beep(500, 300); // Звуковий сигнал
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+int main() {
+    SetConsoleOutputCP(65001); // Встановлення кодової сторінки UTF-8 для коректного відображення символів
+
+    printTableLine();
+    printTableRow("Pory Roku", "", "", "");
+    printTableLine();
+    printTableRow("Zyma", "Vesna", "Lito", "Osin");
+    printTableLine();
+
+    return 0;
+}
