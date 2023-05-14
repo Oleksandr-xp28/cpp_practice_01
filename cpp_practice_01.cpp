@@ -1,12 +1,27 @@
 // cpp_practice_01.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//practice/ex_2
 
 #include <iostream>
+#include <windows.h>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+void printWithBeep(const std::string& text) {
+    std::cout << text << std::endl;
+    Beep(500, 300); // «вуковий сигнал
+    Beep(500, 300); // «вуковий сигнал
+    Beep(500, 300); // «вуковий сигнал
 }
+
+int main() {
+    SetConsoleOutputCP(65001); // ¬становленн€ кодовоњ стор≥нки UTF-8 дл€ коректного в≥дображенн€ символ≥в
+
+    printWithBeep("Kraj lukomorТa dub zelenyj,");
+    printWithBeep("I zolotyj lancyuh na nim:");
+    printWithBeep("Shodnya, shonochi kit uchenyj");
+    printWithBeep("Na lancyuhu kruzhlТaje timФ");
+
+    return 0;
+}
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
