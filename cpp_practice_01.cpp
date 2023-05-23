@@ -9,7 +9,17 @@ using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    float sum;
+    int grn;
+    int kopek;
+
+    cout << "Enter the amount of money in grn: ";
+    cin >> grn;
+    cout << "Enter the amount of money in kopek: ";
+    cin >> kopek;
+    kopek = kopek % 100;
+    sum = grn + kopek / 100.0;
+    cout << "The amount of money is " << sum << " grn" << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
